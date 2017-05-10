@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Senario 4.2";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h2>May the form be with you</h2>
+        <form method="get" asp-action="Senario42">
+            Your name you may type: <input type="text" name="name" />
+            <br />
+            Your Electronic letter address: <input type="text" name="email" />
+            <br />
+            <input type="submit" class="btn btn-lg btn-info" value="Send pidgin"/>
+        </form>
+        @if ( @ViewData["name"] is string && @ViewData["email"] is string )
+        {
+            <h4>Your name: @ViewData["name"] </h4>
+            <h4>Your email: @ViewData["email"] </h4>
+        }
+    </div>
+</div>
